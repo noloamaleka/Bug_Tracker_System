@@ -1,0 +1,11 @@
+#head_aside
+{
+background: lavender;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.9px);
+-webkit-backdrop-filter: blur(3.9px);
+color: black;
+text-align: center;
+border-radius: 2px;
+display: none;
+}

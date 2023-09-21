@@ -1,0 +1,63 @@
+/*background video properties*/
+#background-video 
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+    display: none;
+}
+/*video properties*/
+video
+{
+object-fit: contain;
+}
+/*container div*/
+#container
+{  
+    position:absolute;
+    display: block;
+    top:10px;
+    right:10px;
+    bottom:10px;
+    left:10px;
+    border-radius: 20px;
+    padding: 10px;
+    /* -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); */
+    /* overflow-y: auto; */
+    border: black solid 4px;
+    background-color: white;
+    background: linear-gradient(to right, #267871, #be2cb2);
+    min-width: 50%;
+    color: azure;
+    
+    
+}
+hr , #first-line-{
+    border: 1px solid black;
+}
+/*header properties*/
+header
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+/* circle properties in the header*/
+#circles
+{
+    width: 15px;
+    height: 15px;
+    background-color: #f96057;
+    border-radius: 50%;
+    box-shadow: 24px 0 0 0 #f8ce52, 48px 0 0 0 #5fcf65;
+    flex-shrink: 0;
+    display: flex;
+    top: 0;
+    left: 0;
+}
+/*first line properties*/

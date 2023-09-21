@@ -1,0 +1,122 @@
+/*import google fonts*/
+@import url(https://fonts.googleapis.com/css?family=DynaPuff);
+body {
+    background: #91c0f0;
+    font-family: arial;
+    display: flex;
+
+}
+
+
+.card 
+{
+    width: 400px;
+    height: 254px;
+    margin: auto auto;
+    background: #91c0f0;
+    background: linear-gradient(to right, #267871, #be2cb2);
+    border-radius: 8px;
+    z-index: 1;
+    
+   
+}
+
+   
+   .tools {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+   }
+   
+   .circle {
+    padding: 0 4px;
+   }
+   
+   .box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+   }
+   
+   .red {
+    background-color: #ff605c;
+   }
+   
+   .yellow {
+    background-color: #ffbd44;
+   }
+   
+   .green {
+    background-color: #00ca4e;
+   }
+   .card__content
+   {
+    display: flex;
+    flex-direction: column;
+    background-color: #F8FBFE;
+    flex-wrap: wrap;
+    
+   }
+   .card__content label{
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'DynaPuff';
+    color: #000;
+    margin: 20px 0;
+   }
+   .login_input {
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: #e8e8e8;
+    
+    transition: 0.3s;
+   }
+   
+   .login_input:focus {
+    outline-color: #e8e8e8;
+    background: #e8e8e8;
+    box-shadow: inset 20px 20px 60px #c5c5c5,
+           inset -20px -20px 60px #ffffff;
+    transition: 0.3s;
+   }
+   #login_image
+   {
+    /*align center*/
+    margin: auto;
+    box-align: center;
+   }
+   .card__content h2
+   {
+    text-align: center;
+    font-family: 'DynaPuff';
+   }
+
+   /*login button*/
+  
+   #loginbtn {
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: 'DynaPuff';
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
+   }
+   
+   #loginbtn:hover {
+    border: 1px solid white;
+   }
+   
+   #loginbtn:active {
+    box-shadow: 4px 4px 12px #c5c5c5,
+                -4px -4px 12px #ffffff;
+   }

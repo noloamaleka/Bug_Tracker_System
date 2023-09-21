@@ -1,0 +1,106 @@
+
+#view-all-issue
+{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    /* gap: 2%; */
+    background-color: transparent;
+    padding-bottom: 10px;
+     overflow-y: auto;
+}
+#issue-id
+{
+    display: none;
+}
+
+#issue-card
+{
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    background: rgb(236, 236, 236);
+    /*overflow: scroll;  */ 
+    color: black;
+    width:300px;
+    height:auto;
+    border-radius: 10px;
+    margin: 10px 30px 0 30px;
+    
+    padding:3px;
+    /* gap: 7px; */
+    font-family: 'DynaPuff';
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+#issue-card #issue-identifier
+{
+display: flex;
+flex-direction: row;
+}
+
+#issue-card #img-person-issue
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#issue-card #img-person-issue p
+{
+    margin-top: -5px;
+}
+#issue-card #issue-status
+{
+        width: 100px;
+        text-align: center;
+        height: auto;
+        border-radius: 10px;
+        background: rgb(230, 65, 65);
+        color: white;
+        font-size: 12px;
+}
+#issue-card #issue-priority
+{
+        width: 100px;
+        text-align: center;
+        margin-top: 3px;
+        height: auto;
+        border-radius: 10px;
+        background: rgb(20, 180, 74);
+        color: white;
+        font-size: 12px;
+}
+#issue-card img
+{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+/* edit button */
+#edit {
+    background: #FBCA1F;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+   }
+   
+   #edit:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+   }
+   
+   #edit:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+   }
+#centerbtn
+{
+display:flex;
+justify-content:center;
+align-items:center;
+}

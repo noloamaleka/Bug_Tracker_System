@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="./js/Chart.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assests/pngegg.png">
+    <link rel="stylesheet" href="./css/container.css">
+    <link rel="stylesheet" href="./css/section1.css">
+    <link rel="stylesheet" href="./css/cards.css">
+    <link rel="stylesheet" href="./css/route.css">
+    <link rel="stylesheet" href="./css/button_route.css">
+    <link rel="stylesheet" href="./css/aside.css">
+    <link rel="stylesheet" href="./css/aside_body.css">
+    <link rel="stylesheet" href="./css/aside_head.css">
+    <link rel="stylesheet" href="./css/create_people.css">
+    <link rel="stylesheet" href="./css/create_project.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/view_people.css">
+    <link rel="stylesheet" href="./css/view_issues.css">
+    <link rel="stylesheet" href="./css/create_issue.css">
+    <link rel="stylesheet" href="./css/scrollbar.css">
+   
+    <title>BlitzBug Tracker</title>
+</head>
+<body>
+   
+
+    <!------------------------------ Video ------------------------------>
+    <div id="background-video">
+        <video autoplay loop muted plays-inline>
+            <source src="./assests/7btrrd.mp4" type="video/mp4">
+        </video>
+    </div>
+    <!------------------------------ End of background video ------------------------------>
+
+    <!------------------------------ Main app ------------------------------>
+<div id="container" >
+    <header>
+        
+        <div id="circles"> </div>
+
+    </header>
+
+    <hr >
+
+<section id="section1">
+<div id="route">
+    <div id="bug-text" >
+        BlitzBug Tracker
+    </div>
+    <button id="button-route" onclick="home()">
+       DashBoard
+    </button>
+    <button id="button-route" onclick="create_issue()">
+        Create Issue
+    </button>
+    <button id="button-route" onclick="view_all_issue()">
+        View all Issue
+    </button>
+    <button id="button-route" onclick="view_particular_issue()">
+        View particular issue
+    </button>
+    <button id="button-route" onclick="create_people()">
+        Create People
+    </button>
+    <button id="button-route" onclick="view_people()">
+        View People
+    </button>
+    <button id="button-route" onclick="create_project()">
+Create Project
+    </button>
+</div>
+
+<div id="aside">
+
+    <div id="head_aside">
+        <div id="pngegg">
+            <img src="./assests/pngegg.png" alt="pngegg">
+        </div>
+</div>
+
+<div id="body_aside">
+   
+    <!--home-->
+    <div id="home">
+        
+        <canvas id="people_issues" style="width:400px;max-width:500px;"></canvas>
+        <canvas id="myChart" style="width:400px;max-width:500px"></canvas>
+        
+    </div>
+    <!--end of home-->
+   
+    <!--create an issue-->
+    <div id="create-issue">
+        
+        <input type="text" name="summary_issue" class="input_issue" placeholder="summary" id="summary_issue" required>
+        <input type="text" name="description_issue" class="input_issue" placeholder="description" id="description_issue" required>
+        <input type="text" name="issue-identifier" class="input_issue" placeholder="Who identified the issue" id="person_issue_id" required>
+        <input type="text" placeholder="Date identified" id="date-identified" onfocus="(this.type='date')"  class="input_issue" required>
+        <select id="projects-to-select" class="input_issue">
+            <option value="">Select Project with issue</option>
+        </select>
+        <select id="people-to-select"  class="input_issue">
+            <option value="">Select a person you want to assign the problem to </option>
+        </select>
+        <select id="status-to-select"  class="input_issue">
+            <option value="open">Open</option>
+            <option value="resolved">Resolved</option>
+            <option value="overdue">Overdue</option>
+        </select>
+        <select id="priority-to-select"  class="input_issue">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <input placeholder="issue target date" onfocus="(this.type='date')" type="text"  id="issue-target-date"  class="input_issue" required>
+        <input type="text" placeholder="issue actual date"  id="issue-actual-date"  class="input_issue" onfocus="(this.type='date')" required>
+        <input type="text" name="resolution-summary" class="input" placeholder="Resolution summary" id="resolution-summary" required>
+        <div id="create-issue-button">
+            <button type="reset" class="reset_" onclick="clear_project_en()"><span class="text">Reset</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
+            <button class="cssbuttons-io-button"  onclick="submit_issues()">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path></svg>
+             <span>Add</span>
+           </button>
+            </div>
+        
+    </div>
+    <!--end of create an issue-->
+<!--view all issues-->
+<div id="view-all-issue" >
+ <div id="search-bar">
+
+ </div>
+
+
+</div>
+<!--end of view all issues-->
+
+
+
+    <!--view particular issue-->
+    <div id="view-particular-issue">
+      
+    </div>
+
+     <!--end view particular issue-->
+   <!--creating people -->
+   
+   <div id="create-people">
+ 
+    <label for="ID">ID</label>
+    <input type="text" name="ID" class="input" placeholder="ID" id="person_id" required>
+    <label for="Name">Name</label>
+    <input type="text" name="Name" class="input" placeholder="Name" id="person_name" required>
+   <label for="surname">Surname</label>
+   <input type="text" name="surname" class="input" placeholder="Surname" id="person_surname" required>
+   <label for="Email">Email Address</label>
+   <input type="text" name="Email" class="input" placeholder="Email" id="person_email" required>
+   <label for="username">Username</label>
+   <input type="text" name="username" class="input" placeholder="username" id="person_username" maxlength="10" required>
+   <label for="person_image">Image</label>
+   <input name="person_image" id="person_image" class="input" type="file" accept="image/*" />
+   <div id="create-people-button">
+   <button type="reset" class="reset_" onclick="clear_people()"><span class="text">Reset</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
+   <button class="cssbuttons-io-button"  onclick="submit_people()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path></svg>
+    <span>Add</span>
+  </button>
+   </div>
+   </div>
+
+   <!--end of creating people-->
+
+    <!---------------------------------view people------------------------------------->
+   <div id="view-people">
+    <div class="card">
+        <img src ="assests/adminicon.jpg" alt="admin image" class="img">
+          <div class="info">
+            <span>John Doe</span>
+            <p>Admin</p>
+          </div>
+         
+          <button id="del" class="tooltip" >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" height="25" width="25">
+              <path fill="#6361D9" d="M8.78842 5.03866C8.86656 4.96052 8.97254 4.91663 9.08305 4.91663H11.4164C11.5269 4.91663 11.6329 4.96052 11.711 5.03866C11.7892 5.11681 11.833 5.22279 11.833 5.33329V5.74939H8.66638V5.33329C8.66638 5.22279 8.71028 5.11681 8.78842 5.03866ZM7.16638 5.74939V5.33329C7.16638 4.82496 7.36832 4.33745 7.72776 3.978C8.08721 3.61856 8.57472 3.41663 9.08305 3.41663H11.4164C11.9247 3.41663 12.4122 3.61856 12.7717 3.978C13.1311 4.33745 13.333 4.82496 13.333 5.33329V5.74939H15.5C15.9142 5.74939 16.25 6.08518 16.25 6.49939C16.25 6.9136 15.9142 7.24939 15.5 7.24939H15.0105L14.2492 14.7095C14.2382 15.2023 14.0377 15.6726 13.6883 16.0219C13.3289 16.3814 12.8414 16.5833 12.333 16.5833H8.16638C7.65805 16.5833 7.17054 16.3814 6.81109 16.0219C6.46176 15.6726 6.2612 15.2023 6.25019 14.7095L5.48896 7.24939H5C4.58579 7.24939 4.25 6.9136 4.25 6.49939C4.25 6.08518 4.58579 5.74939 5 5.74939H6.16667H7.16638ZM7.91638 7.24996H12.583H13.5026L12.7536 14.5905C12.751 14.6158 12.7497 14.6412 12.7497 14.6666C12.7497 14.7771 12.7058 14.8831 12.6277 14.9613C12.5495 15.0394 12.4436 15.0833 12.333 15.0833H8.16638C8.05588 15.0833 7.94989 15.0394 7.87175 14.9613C7.79361 14.8831 7.74972 14.7771 7.74972 14.6666C7.74972 14.6412 7.74842 14.6158 7.74584 14.5905L6.99681 7.24996H7.91638Z" clip-rule="evenodd" fill-rule="evenodd"></path>
+            </svg>
+            <span class="tooltiptext">remove</span>
+          </button>
+        </div>
+    </div>
+    </div>
+    <!------------------------------ End of view people--------------------------------->
+    <!--creating project-->
+    
+    <div id="create-project">
+    <label for="project_id">Project ID</label>
+    <input type="text" name="project_id" class="input_" placeholder="Project ID" id="project_id" required>
+    <label for="project_name">Project Name</label>
+    <input type="text" name="project_name" class="input_" placeholder="Project Name" id="project_name" required>
+    <div id="create-people-button">
+        <button  class="reset_"  onclick="clear_()"><span class="text" >Reset</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
+        <button class="cssbuttons-io-button"  onclick="submit_project()">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path></svg>
+         <span>Add</span>
+       </button>
+        </div>
+    </div>
+    
+</div>
+
+    </section>
+    
+</div>
+
+
+    <!------------------------------ End of Main app ------------------------------>
+
+   <script src="./js/button_route_handler.js"></script>
+   <script src="./js/sweetalert2.js"></script>
+   <script src="./js/create_project.js"></script>
+   <script src="./js/create_people.js"></script>
+   <script src="./js/people_issues_chart.js"></script>
+   <script src="./js/project_bugs_chart.js"></script>
+   <script src="./js/storage_handler.js"></script>
+   <script src="./js/person_image_handler.js"></script>
+  
+   <script src="./js/create_issue.js"></script>
+   <script src="./js/view_issues.js"></script>
+   <script src="./js/edit_the_issues.js"></script>
+   <script src="./js/update_from_local_storage.js"></script>
+
+</body>
+</html>

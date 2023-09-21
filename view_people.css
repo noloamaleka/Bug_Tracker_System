@@ -1,0 +1,9 @@
+#view-people{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    overflow: scroll-y;
+}
