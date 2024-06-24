@@ -1,4 +1,7 @@
 # Bug_Tracker_System
+
+![Dashboard Image](https://github.com/noloamaleka/Bug_Tracker_System/blob/main/Screenshot%20(2557).png?raw=true)
+
 Default username: admin
 Default password: password123 
 
